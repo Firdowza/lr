@@ -3,144 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Low-Carb Meal Plan</title>
+    <title>Low-Carb Recipes</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
             margin: 0;
             padding: 20px;
+            background-color: #f4f4f4;
         }
-        header {
+        h1 {
             text-align: center;
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2, h3 {
             color: #333;
         }
+        .day {
+            background-color: #fff;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .day:hover {
+            background-color: #e0e0e0;
+        }
+        .recipes {
+            display: none;
+            margin-top: 10px;
+        }
         .recipe {
-            margin-bottom: 40px;
-        }
-        .ingredients, .instructions {
-            padding-left: 20px;
-        }
-        .ingredients ul {
-            list-style-type: disc;
+            margin: 10px 0;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Low-Carb, Low-Sugar, Low-Starch Meal Plan</h1>
-        <p>Delicious, healthy meals to fuel your day!</p>
-    </header>
+    <h1>10-Day Low-Carb Recipes</h1>
 
-    <div class="container">
-
-        <!-- Breakfast Recipe -->
-        <div class="recipe">
-            <h2>Breakfast: Avocado and Eggs with Sautéed Spinach</h2>
-            <h3>Ingredients:</h3>
-            <div class="ingredients">
-                <ul>
-                    <li>2 large eggs</li>
-                    <li>½ avocado</li>
-                    <li>1 cup fresh spinach</li>
-                    <li>1 tbsp olive oil or butter</li>
-                    <li>Salt and pepper to taste</li>
-                    <li>Optional: Chili flakes or paprika</li>
-                </ul>
-            </div>
-            <h3>Instructions:</h3>
-            <div class="instructions">
-                <p>1. Heat a skillet with olive oil or butter. Crack the eggs into the skillet and cook them to your liking (sunny-side-up or scrambled).</p>
-                <p>2. Add the spinach to the skillet and cook for 1-2 minutes until wilted.</p>
-                <p>3. Plate the eggs and spinach. Add avocado slices, and season with salt, pepper, and optional chili flakes or paprika.</p>
-            </div>
+    <div class="day" onclick="toggleRecipes('day1')">
+        <h2>Day 1</h2>
+        <div id="day1" class="recipes">
+            <div class="recipe"><strong>Breakfast:</strong> Scrambled Eggs with Avocado and Spinach</div>
+            <div class="recipe"><strong>Lunch:</strong> Grilled Chicken Salad</div>
+            <div class="recipe"><strong>Dinner:</strong> Baked Salmon with Asparagus</div>
         </div>
-
-        <!-- Lunch Recipe -->
-        <div class="recipe">
-            <h2>Lunch: Grilled Chicken Salad with Olive Oil & Lemon Dressing</h2>
-            <h3>Ingredients:</h3>
-            <div class="ingredients">
-                <ul>
-                    <li>1 grilled chicken breast</li>
-                    <li>2 cups mixed greens (spinach, arugula, or lettuce)</li>
-                    <li>½ cucumber, sliced</li>
-                    <li>1 small tomato, diced</li>
-                    <li>¼ red onion, thinly sliced</li>
-                    <li>1 tbsp olive oil</li>
-                    <li>1 tbsp lemon juice</li>
-                    <li>Salt and pepper to taste</li>
-                    <li>Optional: Avocado or olives</li>
-                </ul>
-            </div>
-            <h3>Instructions:</h3>
-            <div class="instructions">
-                <p>1. Grill or bake the chicken breast until fully cooked.</p>
-                <p>2. In a bowl, combine mixed greens, cucumber, tomato, and onion.</p>
-                <p>3. Make the dressing by mixing olive oil, lemon juice, salt, and pepper. Pour over the salad.</p>
-                <p>4. Slice the chicken and add on top. Optionally, add avocado or olives.</p>
-            </div>
-        </div>
-
-        <!-- Dinner Recipe -->
-        <div class="recipe">
-            <h2>Dinner: Salmon with Cauliflower Rice and Broccoli</h2>
-            <h3>Ingredients:</h3>
-            <div class="ingredients">
-                <ul>
-                    <li>1 salmon fillet (5-6 oz)</li>
-                    <li>1 cup cauliflower rice</li>
-                    <li>1 cup broccoli florets</li>
-                    <li>1 tbsp olive oil or coconut oil</li>
-                    <li>1 tsp garlic powder</li>
-                    <li>1 tsp lemon juice</li>
-                    <li>Salt and pepper to taste</li>
-                    <li>Optional: Fresh herbs (parsley, dill)</li>
-                </ul>
-            </div>
-            <h3>Instructions:</h3>
-            <div class="instructions">
-                <p>1. Preheat the oven to 400°F. Place the salmon on a baking sheet, season with garlic, salt, and pepper. Bake for 12-15 minutes.</p>
-                <p>2. Sauté cauliflower rice with oil in a pan until tender (5-7 minutes).</p>
-                <p>3. Steam or roast the broccoli until tender (4-5 minutes steaming or 10 minutes roasting).</p>
-                <p>4. Plate the salmon, cauliflower rice, and broccoli. Drizzle with lemon juice and garnish with herbs.</p>
-            </div>
-        </div>
-
-        <!-- Dessert Recipe -->
-        <div class="recipe">
-            <h2>Dessert: Greek Yogurt with Chia Seeds and Berries</h2>
-            <h3>Ingredients:</h3>
-            <div class="ingredients">
-                <ul>
-                    <li>½ cup full-fat plain Greek yogurt</li>
-                    <li>1 tsp chia seeds</li>
-                    <li>¼ cup mixed berries (blueberries, raspberries)</li>
-                    <li>Optional: A few drops of stevia</li>
-                </ul>
-            </div>
-            <h3>Instructions:</h3>
-            <div class="instructions">
-                <p>1. Stir chia seeds into the yogurt and let it sit for a few minutes to soften the seeds.</p>
-                <p>2. Top with berries and optionally sweeten with stevia.</p>
-            </div>
-        </div>
-
     </div>
 
+    <div class="day" onclick="toggleRecipes('day2')">
+        <h2>Day 2</h2>
+        <div id="day2" class="recipes">
+            <div class="recipe"><strong>Breakfast:</strong> Greek Yogurt with Chia Seeds and Berries</div>
+            <div class="recipe"><strong>Lunch:</strong> Turkey Lettuce Wraps</div>
+            <div class="recipe"><strong>Dinner:</strong> Cauliflower Stir-Fry with Shrimp</div>
+        </div>
+    </div>
+
+    <div class="day" onclick="toggleRecipes('day3')">
+        <h2>Day 3</h2>
+        <div id="day3" class="recipes">
+            <div class="recipe"><strong>Breakfast:</strong> Veggie Omelette</div>
+            <div class="recipe"><strong>Lunch:</strong> Tuna Salad Lettuce Wraps</div>
+            <div class="recipe"><strong>Dinner:</strong> Grilled Steak with Roasted Brussels Sprouts</div>
+        </div>
+    </div>
+
+    <div class="day" onclick="toggleRecipes('day4')">
+        <h2>Day 4</h2>
+        <div id="day4" class="recipes">
+            <div class="recipe"><strong>Breakfast:</strong> Chia Pudding with Almonds</div>
+            <div class="recipe"><strong>Lunch:</strong> Cobb Salad</div>
+            <div class="recipe"><strong>Dinner:</strong> Zucchini Noodles with Pesto and Chicken</div>
+        </div>
+    </div>
+
+    <div class="day" onclick="toggleRecipes('day5')">
+        <h2>Day 5</h2>
+        <div id="day5" class="recipes">
+            <div class="recipe"><strong>Breakfast:</strong> Smoked Salmon and Eggs</div>
+            <div class="recipe"><strong>Lunch:</strong> Grilled Chicken and Veggies</div>
+            <div class="recipe"><strong>Dinner:</strong> Lamb Chops with Cauliflower Mash</div>
+        </div>
+    </div>
+
+    <div class="day" onclick="toggleRecipes('day6')">
+        <h2>Day 6</h2>
+        <div id="day6" class="recipes">
+            <div class="recipe"><strong>Breakfast:</strong> Coconut Flour Pancakes</div>
+            <div class="recipe"><strong>Lunch:</strong> Shrimp and Avocado Salad</div>
+            <div class="recipe"><strong>Dinner:</strong> Baked Chicken Thighs with Green Beans</div>
+        </div>
+    </div>
+
+    <div class="day" onclick="toggleRecipes('day7')">
+        <h2>Day 7</h2>
+        <div id="day7" class="recipes">
+            <div class="recipe"><strong>Breakfast:</strong> Egg Muffins</div>
+            <div class="recipe"><strong>Lunch:</strong> Salmon and Cucumber Salad</div>
+            <div class="recipe"><strong>Dinner:</strong> Grilled Pork Chops with Roasted Cauliflower</div>
+        </div>
+    </div>
+
+    <div class="day" onclick="toggleRecipes('day8')">
+        <h2>Day 8</h2>
+        <div id="day8" class="recipes">
+            <div class="recipe"><strong>Breakfast:</strong> Cottage Cheese with Berries</div>
+            <div class="recipe"><strong>Lunch:</strong> Chicken Avocado Salad</div>
+            <div class="recipe"><strong>Dinner:</strong> Beef Stir-Fry with Zucchini</div>
+        </div>
+    </div>
+
+    <div class="day" onclick="toggleRecipes('day9')">
+        <h2>Day 9</h2>
+        <div id="day9" class="recipes">
+            <div class="recipe"><strong>Breakfast:</strong> Avocado and Bacon Scramble</div>
+            <div class="recipe"><strong>Lunch:</strong> Turkey Spinach Roll-ups</div>
+            <div class="recipe"><strong>Dinner:</strong> Grilled Cod with Sautéed Spinach</div>
+        </div>
+    </div>
+
+    <div class="day" onclick="toggleRecipes('day10')">
+        <h2>Day 10</h2>
+        <div id="day10" class="recipes">
+            <div class="recipe"><strong>Breakfast:</strong> Boiled Eggs and Avocado</div>
+            <div class="recipe"><strong>Lunch:</strong> Zucchini Noodles with Pesto and Chicken</div>
+            <div class="recipe"><strong>Dinner:</strong> Stir-fried Tofu with Broccoli</div>
+        </div>
+    </div>
+
+    <script>
+        function toggleRecipes(dayId) {
+            const recipesDiv = document.getElementById(dayId);
+            if (recipesDiv.style.display === "none" || recipesDiv.style.display === "") {
+                recipesDiv.style.display = "block";
+            } else {
+                recipesDiv.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
